@@ -57,9 +57,11 @@ void CLab1View::OnDraw(CDC* pDC)
 
 	;
 	GetClientRect(&clientRect);
-	pDC->SetMapMode(MM_ANISOTROPIC);
+	pDC->SetMapMode(MM_ISOTROPIC);
+
 	pDC->SetWindowExt(clientRect.right, clientRect.bottom);
 	pDC->SetViewportExt(clientRect.right, clientRect.bottom);
+
 	pDC->SetWindowOrg(0, 0);
 	DrawCockpitWall(pDC);
 	DrawSideWindow(pDC, false);
@@ -114,14 +116,14 @@ void CLab1View::DrawSideWindow(CDC* pDC, bool m) {
 	points[0].x = MirrorX(clientRect.right * 0.05, m); points[0].y = clientRect.bottom * 0.088;
 	points[1].x = MirrorX(clientRect.right * 0.08, m); points[1].y = clientRect.bottom * 0.11;
 	points[2].x = MirrorX(clientRect.right * 0.096, m); points[2].y = clientRect.bottom * 0.16;
-	pDC->PolyBezierTo(points, 3);
+	pDC->PolylineTo(points, 3);
 
 	pDC->LineTo(MirrorX(clientRect.right * 0.17, m), clientRect.bottom * 0.58);
 
 	points[0].x = MirrorX(clientRect.right * 0.177, m); points[0].y = clientRect.bottom * 0.624;
 	points[1].x = MirrorX(clientRect.right * 0.167, m); points[1].y = clientRect.bottom * 0.681;
 	points[2].x = MirrorX(clientRect.right * 0.14, m); points[2].y = clientRect.bottom * 0.71;
-	pDC->PolyBezierTo(points, 3);
+	pDC->PolylineTo(points, 3);
 
 	pDC->LineTo(MirrorX(0, m), clientRect.bottom * 0.83);
 
@@ -163,9 +165,8 @@ void CLab1View::DrawCenterWindow(CDC* pDC){
 
 	points[0].x = clientRect.right * 0.210; points[0].y = clientRect.bottom * 0.628;
 	points[1].x = clientRect.right * 0.239; points[1].y = clientRect.bottom * 0.663;
-	points[2].x = clientRect.right * 0.274; points[2].y = clientRect.bottom * 0.641;
+	points[2].x = clientRect.right * 0.270; points[2].y = clientRect.bottom * 0.645;
 	pDC->PolyBezierTo(points, 3);
-
 
 	points[0].x = clientRect.right * 0.282; points[0].y = clientRect.bottom * 0.639;
 	points[1].x = clientRect.right * 0.402; points[1].y = clientRect.bottom * 0.558;
