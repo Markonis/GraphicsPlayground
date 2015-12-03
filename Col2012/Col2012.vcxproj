@@ -11,8 +11,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{9E07CDCE-E222-40BB-8994-351A2652462C}</ProjectGuid>
-    <RootNamespace>Lab1</RootNamespace>
+    <ProjectGuid>{09F93B97-D350-4783-89D9-4BB5C4B71DF9}</ProjectGuid>
+    <RootNamespace>Col2012</RootNamespace>
     <Keyword>MFCProj</Keyword>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -99,20 +99,18 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="DImage.h" />
-    <ClInclude Include="Lab1.h" />
-    <ClInclude Include="Lab1Doc.h" />
-    <ClInclude Include="Lab1View.h" />
+    <ClInclude Include="Col2012.h" />
+    <ClInclude Include="Col2012Doc.h" />
+    <ClInclude Include="Col2012View.h" />
     <ClInclude Include="MainFrm.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="DImage.cpp" />
-    <ClCompile Include="Lab1.cpp" />
-    <ClCompile Include="Lab1Doc.cpp" />
-    <ClCompile Include="Lab1View.cpp" />
+    <ClCompile Include="Col2012.cpp" />
+    <ClCompile Include="Col2012Doc.cpp" />
+    <ClCompile Include="Col2012View.cpp" />
     <ClCompile Include="MainFrm.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -120,27 +118,17 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="Lab1.rc" />
+    <ResourceCompile Include="Col2012.rc" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="Map.png" />
-    <Image Include="res\Lab1.ico" />
-    <Image Include="res\Lab1Doc.ico" />
+    <None Include="res\Col2012.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\Col2012.ico" />
+    <Image Include="res\Col2012Doc.ico" />
     <Image Include="res\Toolbar.bmp" />
-    <Image Include="res\Toolbar256.bmp" />
-    <Image Include="Sky.jpg" />
-    <Image Include="Suhoj.bmp" />
-    <Image Include="UserImages.bmp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="res\Lab1.rc2" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
-  <ProjectExtensions>
-    <VisualStudio>
-      <UserProperties RESOURCE_FILE="Lab1.rc" />
-    </VisualStudio>
-  </ProjectExtensions>
 </Project>
